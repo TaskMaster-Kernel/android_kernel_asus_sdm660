@@ -186,12 +186,6 @@
 		};
 	};
 
-	qcom,pm660@1 {
-		pm660_haptics: qcom,haptic@c000 {
-			qcom,actuator-type = "erm";
-		};
-	};
-
 	qcom,pm660l@2 {
 		pm660l_gpios: gpios {
 			gpio@c400 {
@@ -347,6 +341,10 @@
 &pm660_charger {
        ADC_SW_EN-gpios59 = <&tlmm 71 0x0>;
        ADCPWREN_PMI_GP1-gpios34 = <&tlmm 3 0x0>;
+};
+
+&pm660_haptics {
+	qcom,actuator-type = "erm";
 };
 
 &pm660l_wled {
